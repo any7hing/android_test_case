@@ -1,0 +1,3 @@
+androguard
+python-dotenv
+Appium-Python-Client 
