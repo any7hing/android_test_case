@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 import os
 from selenium.common.exceptions import NoSuchElementException
 
-## При выполнении пользовался: Appium server GUI, Genimotion, Appium inspector, Virtyal Box, Android Studio
+## Браузер должен быть последней версии. При первом запуске теста - иметь вид описанный в Readme.
+## После первого прогона, можно запускать многократно
 
 def test_google_chrome():
     capabilities = {
