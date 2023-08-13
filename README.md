@@ -12,6 +12,9 @@
 
 ![текст задания](https://i.ibb.co/tX3GyS8/2023-08-13-071147.png)
 
+Для корректного запуска скрипта в 3 задании - лаунчек браузера должен быть виден на экране, и иметь такой вид:
+![вид браузера](https://i.ibb.co/Kjsbh7y/2023-08-13-111753.png)
+
 ## Технологии
 - [Appium](http://appium.io/docs/en/2.0/)
 - [Appium inspector](https://github.com/appium/appium-inspector)
