@@ -20,6 +20,7 @@
 - [Android SDK tools](https://developer.android.com/tools)
 - [Androguard](https://github.com/androguard/androguard)
 - [Appium Python client](https://pypi.org/project/Appium-Python-Client/)
+- [VirtualBox](https://www.virtualbox.org/)
 
 ## Использование
 - Склонируйте репозиторий, установите переменные окружения в файле .env,установить зависимости, подключите телефон для теста
