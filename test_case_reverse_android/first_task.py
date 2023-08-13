@@ -3,10 +3,6 @@ from androguard.core.bytecodes import apk
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-os.environ['PATH'] =  os.getenv('PATH_TO_AAPT')
-a = apk.APK('Dingtone_v6.1.0.apk')
-
 ### Будем получать необходимы нам данные 2 способами, через AAPT и с помошью библиотеки "androguard"
 ### И сравнивать результаты полученные с использованием разных методов
 
@@ -32,6 +28,9 @@ def get_list_of_permission_by_AAPT():
 
 
 if __name__ == '__main__':
+    load_dotenv()
+    os.environ['PATH'] =  os.getenv('PATH_TO_AAPT')
+    a = apk.APK('Dingtone_v6.1.0.apk')
     
     assert get_package_name_by_AAPT() == a.get_package()
     print("package_name приложения =",a.get_package())

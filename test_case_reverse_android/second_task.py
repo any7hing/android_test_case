@@ -19,7 +19,7 @@ def open_dev_activity(): # открывает настройки разрабо�
 
 def get_activityes_by_androguard():
     a = apk.APK('Settings.apk')
-    print(list(filter(lambda x: 'evelop' in x, a.get_activities())))
+    print('Cписок активити связанных с режимом разработчика:', list(filter(lambda x: 'evelop' in x, a.get_activities())))
 
 
 if __name__ == '__main__':
