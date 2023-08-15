@@ -20,7 +20,7 @@ def test_google_chrome():
     driver.implicitly_wait(1)
 
     try:
-    
+        # Открываем браузер
         digit1_btn = driver.find_element(by=AppiumBy.ACCESSIBILITY_ID, value='Chrome')
         digit1_btn.click()
         
@@ -28,22 +28,24 @@ def test_google_chrome():
         pass
     
     finally:
+            # тапаем по окну поиска на начальном экране, чтобы открыть url bar
             search_box_text = driver.find_element(by=AppiumBy.ID, value='com.android.chrome:id/search_box_text')
             search_box_text.click()
-        
+            # вводим текст в URL bar
             find_text = driver.find_element(by=AppiumBy.ID, value ='com.android.chrome:id/url_bar')
             find_text.click()
             find_text.send_keys('собака')
-            
+            # тапаем чтобы начать поиск
             buff = driver.find_element(by=AppiumBy.XPATH, value='/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.ImageView')
             buff.click()
-            
+            # свайпаем вниз
             for _ in range(10):
                 driver.swipe(470, 2000, 470, 400, 400)
+            # открываем рандомную ссылку
             el = driver.find_element(by=MobileBy.ANDROID_UIAUTOMATOR, value='new UiSelector().textContains("обак").clickable(true)')
             el.click()
-            
             sleep(3)
+            # возвращаемся на исходную
             driver.press_keycode(4)
             driver.press_keycode(4)
         
